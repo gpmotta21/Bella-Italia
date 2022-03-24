@@ -1,0 +1,42 @@
+@import "./modules/homepage.css";
+@import "./modules/menu.css";
+@import "./modules/navbar.css";
+
+:root {
+  --white: #edfdfb;
+  --black: #04030f;
+}
+
+html,
+body {
+  width: 100%;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  height: 3400px;
+  max-width: 1920px;
+  margin: 0 auto;
+  background-color: var(--white);
+  overflow-x: hidden;
+}
+
+a {
+  text-decoration: none;
+}
+
+.darkHeader {
+  background: var(--black);
+  color: var(--white);
+}
+
+.darkHeader > a {
+  color: var(--white);
+}
+
+header > a {
+  color: var(--black);
+  font-family: "Amatic SC", cursive;
+  font-size: 30px;
+}
