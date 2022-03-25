@@ -7,7 +7,7 @@
   height: 750px;
   background-size: cover;
   background-position: bottom;
-  background: url("../../assets/img/bg.png") no-repeat;
+  background: url("../../assets/img/unsplash_40OJLYVWeeM.webp") no-repeat;
   background-position: 30% 50%;
   overflow: hidden;
 }
@@ -53,6 +53,5 @@ img {
     justify-content: center;
   }
   img {
-    content: url("../../assets/img/slice.png");
   }
 }

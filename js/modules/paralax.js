@@ -1,20 +1,28 @@
+var itemTrs = false;
 export default function paralax() {
-    const foodSlider = document.querySelector("#paralaxContainer");
-    const img2 = document.querySelector("#paralaxContainer2");
-    const distance = window.scrollY;
+  const img2 = document.querySelector("#paralaxContainer2");
+  const menuItems = document.querySelectorAll(".menu-item");
+  const menu = document.querySelector("#menu");
+  const distance = window.pageYOffset;
 
-    foodSlider.style.transform = `translateY(${distance * 0.3}px)`;
-    img2.style.transform = `translateY(${distance * 0.5}px)`;
+  img2.style.transform = `translateY(${distance * 0.5}px)`;
 
-    // if (distance > 0) header.classList.add("darkHeader");
-    // else header.classList.remove("darkHeader");
+  menuItems.forEach((i) => {
+    i.style.transform = `translateY(${distance * -1}px)`;
+
+    if (menuItems[0].getBoundingClientRect().top - menu.getBoundingClientRect().top >= 0) {
+      itemTrs = i.style.transform;
+    }
+    i.style.transform = itemTrs;
+  });
 }
 
 if (history.scrollRestoration) {
-    history.scrollRestoration = "manual";
+  history.scrollRestoration = "manual";
 } else {
-    window.onbeforeunload = function() {
-        window.scrollTo(0, 0);
-    };
+  window.onbeforeunload = function () {
+    window.scrollTo(0, 0);
+  };
 }
+
 window.addEventListener("scroll", paralax, false);
