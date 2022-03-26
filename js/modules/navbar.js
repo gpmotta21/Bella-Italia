@@ -1,13 +1,12 @@
 export default function navbar() {
   const distance = window.scrollY,
-    navbar = document.querySelector("header"),
-    homepage = document.querySelector("#homepage"),
-    text = document.querySelector(".text").getBoundingClientRect();
+    header = document.querySelector("header"),
+    logoTitle = document.querySelector(".homepage-logo > img").getBoundingClientRect();
 
-  if (distance > homepage.clientHeight - navbar.clientHeight || text.top <= navbar.clientHeight) {
-    navbar.classList.add("change-color");
+  if (logoTitle.top <= header.clientHeight) {
+    header.classList.add("change-color");
   } else {
-    navbar.classList.remove("change-color");
+    header.classList.remove("change-color");
   }
 }
 

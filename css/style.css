@@ -25,18 +25,3 @@ body {
 a {
   text-decoration: none;
 }
-
-.darkHeader {
-  background: var(--black);
-  color: var(--white);
-}
-
-.darkHeader > a {
-  color: var(--white);
-}
-
-header > a {
-  color: var(--black);
-  font-family: "Amatic SC", cursive;
-  font-size: 30px;
-}

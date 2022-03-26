@@ -1,19 +1,22 @@
 var itemTrs = false;
+
 export default function paralax() {
-  const img2 = document.querySelector("#paralaxContainer2");
+  const logoTitle = document.querySelector(".homepage-logo > div");
+  const logo = document.querySelector(".homepage-logo > img");
   const menuItems = document.querySelectorAll(".menu-item");
-  const menu = document.querySelector("#menu");
+  const menu = document.querySelector(".menu");
   const distance = window.pageYOffset;
 
-  img2.style.transform = `translateY(${distance * 0.5}px)`;
+  logoTitle.style.transform = `translateY(${distance * 0.5}px)`;
+  logo.style.transform = `translateY(${distance * 0.7}px)`;
 
   menuItems.forEach((i) => {
-    i.style.transform = `translateY(${distance * -1}px)`;
+    menu.style.transform = `translateX(${distance * -1}px)`;
 
-    if (menuItems[0].getBoundingClientRect().top - menu.getBoundingClientRect().top >= 0) {
-      itemTrs = i.style.transform;
-    }
-    i.style.transform = itemTrs;
+    // if (menuItems[0].getBoundingClientRect().left - menu.getBoundingClientRect().left >= 0) {
+    //   itemTrs = i.style.transform;
+    // }
+    // i.style.transform = itemTrs;
   });
 }
 
