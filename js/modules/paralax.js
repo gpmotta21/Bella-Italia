@@ -1,25 +1,19 @@
 var itemTrs = false;
-
 export default function paralax() {
-  const logoTitle = document.querySelector(".homepage-logo > div");
-  const logo = document.querySelector(".homepage-logo > img");
-  const menuItems = document.querySelectorAll(".menu-item");
-  const menu = document.querySelector(".menu");
-  const distance = window.pageYOffset;
+  const distance = window.pageYOffset,
+    logoTitle = document.querySelector(".homepage-logo > div"),
+    logo = document.querySelector(".homepage-logo > img"),
+    menuLi = document.querySelector(".menu ul"),
+    homepageImgs = document.querySelectorAll(".homepage-img-ul li");
 
   logoTitle.style.transform = `translateY(${distance * 0.5}px)`;
-  logo.style.transform = `translateY(${distance * 0.7}px)`;
+  logo.style.transform = `translateY(${distance * 0.6}px)`;
 
-  menuItems.forEach((i) => {
-    menu.style.transform = `translateX(${distance * -1}px)`;
-
-    // if (menuItems[0].getBoundingClientRect().left - menu.getBoundingClientRect().left >= 0) {
-    //   itemTrs = i.style.transform;
-    // }
-    // i.style.transform = itemTrs;
+  homepageImgs.forEach((i) => {
+    const speed = i.getAttribute("data-speed");
+    i.style.transform = `translateY(${distance * speed}px)`;
   });
 }
-
 if (history.scrollRestoration) {
   history.scrollRestoration = "manual";
 } else {

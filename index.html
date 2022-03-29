@@ -31,24 +31,44 @@
                 <div >Welcome to</div>
                 <img src="./assets/img/logoFull.svg"/>
             </div>
-        </div>
-    
-        <div class="menu">
-            <ul>
-                <li>
-                    <img src="././assets/img/menu1.png" alt="">
-                    <div class="item-name">Peperoni</div>
+            <ul class="homepage-img-ul">
+                <li data-speed = '.3'>
+                    <img src="assets/img/homepageImg1.png" alt="" />
                 </li>
-                <li class="menu-item">
-                    <img src="././assets/img/menu1.png" alt="">
-                    <div class="item-name">Peperoni</div>
+                <li data-speed = '.4'>
+                    <img src="assets/img/homepageImg2.png" alt="" />
                 </li>
-                <li class="menu-item">
-                    <img src="././assets/img/menu1.png" alt="">
-                    <div class="item-name">Peperoni</div>
+                <li data-speed = '.3'>
+                    <img src="assets/img/homepageImg3.png" alt="" />
                 </li>
             </ul>
         </div>
+    
+        <div class="menu">
+            <div id="carouselDots">
+                <button class="current-dot" data-index='0'>Pizza</button>
+                <button>Macarrão</button>
+                <button>Doce</button>
+            </div>
+            <div id="carousel">
+                <ul>
+                    <li class="current-slide" id="0">
+                        <img src="././assets/img/menu1.png" alt="">
+                        <div class="item-name">Peperoni</div>
+                    </li>
+                    <li class="menu-item" id="1">
+                        <img src="././assets/img/menu1.png" alt="">
+                        <div class="item-name">Peperoni</div>
+                    </li>
+                    <li class="menu-item" id="2">
+                        <img src="././assets/img/menu1.png" alt="">
+                        <div class="item-name">Peperoni</div>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <button id="prev" class="disable-btn">prev</button>
+        <button id="next">next</button>
     </main>
     <script type="module" src="./js/index.js"></script>
 </body>

@@ -1,25 +1,56 @@
 .menu {
   display: flex;
+  justify-content: flex-start;
   align-items: flex-end;
-  flex-wrap: wrap;
-  width: 100%;
+  flex-direction: column;
+  width: 90%;
   height: 750px;
   margin: 0 auto;
-  margin-top: 30px;
   background-position: center;
   position: relative;
-  overflow: hidden;
 }
 
-.menu-item {
-  position: absolute;
+#carousel {
+  height: 100%;
+  width: 800px;
+  position: relative;
   transition: all 0.5s;
-  top: 10%;
-  left: 100%;
-  margin-left: 50px;
-  width: 250px;
+  margin: auto;
+  overflow-x: hidden;
 }
 
-.menu-item img {
-  width: 200px;
+.menu ul,
+.menu li {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.menu img {
+  width: 100px;
+}
+
+#carousel ul {
+  position: relative;
+  height: 100%;
+  background-color: blue;
+  width: 100%;
+  transition: transform ease-in-out 1s;
+}
+
+#carousel li {
+  width: 100%;
+  border: yellow solid;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+}
+
+.current-dot {
+  transition: all 0.5s;
+  color: red;
+}
+
+.disable-btn {
+  color: red;
 }

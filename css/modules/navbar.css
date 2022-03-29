@@ -7,6 +7,7 @@ header {
   height: 70px;
   padding: 5px 0;
   z-index: 1;
+  transition: all 0.5s;
 }
 
 header i {
@@ -18,7 +19,7 @@ header i {
   padding: 10px 15px;
 }
 
-ul {
+header ul {
   display: flex;
   gap: 100px;
   align-items: center;
@@ -28,7 +29,7 @@ ul {
   margin: 0;
 }
 
-ul a {
+header ul a {
   position: relative;
   color: var(--white) !important;
   font-family: "Josefin Sans", sans-serif !important;
@@ -36,7 +37,7 @@ ul a {
   font-size: 20px;
 }
 
-ul a:after {
+header ul a:after {
   content: "";
   position: absolute;
   top: 100%;
@@ -47,28 +48,29 @@ ul a:after {
   transition: all 0.5s;
 }
 
-ul a:hover:after {
+header ul a:hover:after {
   width: 100%;
   left: 0%;
 }
 
-ul img {
+header ul img {
   width: 110px;
 }
 
 .change-color {
-  background-color: rgba(0, 18, 25, 0.9);
+  background-repeat: no-repeat;
+  background: rgba(10, 9, 8, 0.95);
 }
 
 @media (max-width: 1220px) {
   header {
-    background-color: rgba(0, 18, 25, 0.9);
+    background: rgba(10, 9, 8, 0.95);
   }
   header i {
     display: block !important;
   }
 
-  ul {
+  header ul {
     flex-direction: column;
     position: absolute;
     top: 100%;
@@ -77,14 +79,14 @@ ul img {
     height: auto;
     overflow: hidden;
     transition: left 1s ease-in-out;
-    background-color: rgba(0, 18, 25, 0.9);
+    background: rgba(10, 9, 8, 0.95);
     padding: 0;
     overflow: hidden;
     white-space: nowrap;
     padding: 20px 0;
   }
 
-  ul img {
+  header ul img {
     margin-left: 0px;
     width: 200px;
     margin-left: 30px;

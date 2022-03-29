@@ -15,12 +15,29 @@ body {
 body {
   margin: 0;
   padding: 0;
-  height: 3400px;
   max-width: 1920px;
   margin: 0 auto;
   background-color: var(--white);
   overflow-x: hidden;
 }
+
+ul,
+li {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+/* main {
+  scroll-snap-type: y mandatory;
+  overflow-y: scroll;
+  height: 100vh;
+  transition: all 0.3s;
+}
+
+main > div {
+  scroll-snap-align: center;
+} */
 
 a {
   text-decoration: none;
