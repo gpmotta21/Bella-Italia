@@ -6,69 +6,228 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="./css/style.css">
-    <link href="https://fonts.googleapis.com/css2?family=Amatic+SC&display=swap" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css2?family=Alegreya:wght@500&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="./assets/icons/css/all.min.css">
-    <link href="https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@500&display=swap" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css2?family=Josefin+Slab:wght@300&display=swap" rel="stylesheet">
-    <title>Document</title>
+    <link href="https://fonts.googleapis.com/css2?family=Alata&family=Aleo:wght@300&family=Amatic+SC&family=Grape+Nuts&display=swap" rel="stylesheet">
+    <title>Bella Italia</title>
 </head>
 
 <body>
     <header>
-            <i class="fa-solid fa-bars"></i>
+        <i class="fa-solid fa-bars"></i>
         <ul>
-            <img src="./assets/img/logoSmall.svg"/>
-            <a href="#">About us</a>
-            <a href="#">Menu</a>
-            <a href="#">Location</a>
-            <a href="#">Delivery</a>
+            <img src="./assets/img/logoSmall.svg" alt="Bella italia small logo" />
+            <a href="#about">About us</a>
+            <a href="#menu">Menu</a>
+            <a href="#booking">Location & Booking</a>
+            <div>
+                <a href="https://gabrielp.netlify.app/" target="_blank">
+                    <i class="fa-brands fa-instagram"></i>
+                </a>
+                <a href="https://gabrielp.netlify.app/" target="_blank">
+                    <i class="fa-brands fa-twitter"></i>
+                </a>
+                <a href="https://gabrielp.netlify.app/" target="_blank">
+                    <i class="fa-brands fa-facebook"></i>
+                </a>
+            </div>
         </ul>
     </header>
     <main>
-        <div id="homepage">
+        <section id="homepage">
             <div class="homepage-logo">
-                <div >Welcome to</div>
-                <img src="./assets/img/logoFull.svg"/>
+                <div>Welcome to</div>
+                <img src="./assets/img/logoFull.svg" alt="Bella Italia logo" />
             </div>
             <ul class="homepage-img-ul">
-                <li data-speed = '.3'>
-                    <img src="assets/img/homepageImg1.png" alt="" />
-                </li>
-                <li data-speed = '.4'>
-                    <img src="assets/img/homepageImg2.png" alt="" />
-                </li>
-                <li data-speed = '.3'>
-                    <img src="assets/img/homepageImg3.png" alt="" />
-                </li>
+                <a data-speed='.3' href="#menu">
+                    <img src="assets/img/pizzaHomepage.webp" alt="Pizza card" />
+                    <img src="./assets/img/pizzaLogo.webp" alt="Pizza svg" />
+                </a>
+                <a data-speed='.4' href="#menu">
+                    <img src="assets/img/pastaHomepage.webp" alt="Pasta card" />
+                    <img src="./assets/img/pastaLogo.webp" alt="Pasta svg" />
+                </a>
+                <a data-speed='.3' href="#menu">
+                    <img src="assets/img/dessertHomepage.webp" alt="Dessert card" />
+                    <img src="./assets/img/dessertLogo.webp" alt="Dessert svg" />
+                </a>
             </ul>
-        </div>
-    
-        <div class="menu">
-            <div id="carouselDots">
-                <button class="current-dot" data-index='0'>Pizza</button>
-                <button>Macarrão</button>
-                <button>Doce</button>
+        </section>
+        <section id="about">
+            <div class="text-wrapper" data-aos="slide-in-right">
+                <h1>All in one place</h1>
+                <div>Since our modest beginnings in 2005 with a little space in the city of New York, Bella Italia ‘s development has been enlivened with the energy to cook and serve the best possible <b>Italian food.</b>
+                </div>
             </div>
-            <div id="carousel">
-                <ul>
-                    <li class="current-slide" id="0">
-                        <img src="././assets/img/menu1.png" alt="">
-                        <div class="item-name">Peperoni</div>
-                    </li>
-                    <li class="menu-item" id="1">
-                        <img src="././assets/img/menu1.png" alt="">
-                        <div class="item-name">Peperoni</div>
-                    </li>
-                    <li class="menu-item" id="2">
-                        <img src="././assets/img/menu1.png" alt="">
-                        <div class="item-name">Peperoni</div>
-                    </li>
-                </ul>
+            <img src="./assets/img/fork.webp" alt="Fork with pasta" />
+        </section>
+        <section id="menu">
+            <div id="menu-nav" data-aos="slide-up">
+                <div>
+                    <button class="current-menu" aria-label="Pizza category">Pizza</button>
+                    <button aria-label="Pasta category">Pasta</button>
+                    <button aria-label="Dessert category">Dessert</button>
+                </div>
             </div>
-        </div>
-        <button id="prev" class="disable-btn">prev</button>
-        <button id="next">next</button>
+            <ul id="menu-slides" data-aos="slide-up">
+                <li class="slide current-slide">
+                    <ul class="food-list">
+                        <li>
+                            <img src="./assets/img/marguerita.webp" alt="Margherita pizza" />
+                            <h1>Margherita</h1>
+                            <p>Crushed San Marzano tomato, fresh mozzarella and basil.</p>
+                        </li>
+                        <li>
+                            <img src="./assets/img/formaggi.webp" alt="Quattro Formaggi pizza">
+                            <h1>Quattro Formaggi</h1>
+                            <p>Mozzarella, Gorgonzola, Fontina and Parmigiano.</p>
+                        </li>
+                        <li>
+                            <img src="./assets/img/diavola.webp" alt="Diavola pizza">
+                            <h1>Diavola</h1>
+                            <p>Tomato sauce, Mozzarella, spicy salami</p>
+                        </li>
+                        <li>
+                            <img src="./assets/img/stagioni.webp" alt="Quatro Stagioni pizza">
+                            <h1>Quattro Stagioni</h1>
+                            <p>Artichokes, Tomato, basil, summer Mushrooms, fall Olives and Prosciutto</p>
+                        </li>
+                        <li>
+                            <img src="./assets/img/vegetariana.webp" alt="Vegetariana pizza">
+                            <h1>Vegetariana</h1>
+                            <p>Mozzarella, Tomato, Eggs, peppers, aubergines and courgette</p>
+                    </ul>
+
+                    </li>
+                    <li class="slide">
+                        <ul class="food-list">
+                            <li>
+                                <img src="./assets/img/marinara.webp" alt="Spaghetti Marinara" />
+                                <h1>Spaghetti Marinara</h1>
+                                <p>Marinara sauce served on a bed of spaghetti</p>
+                            </li>
+                            <li>
+                                <img src="./assets/img/lentils.webp" alt="Pasta with lentils" />
+                                <h1>Pasta with lentils</h1>
+                                <p>Lentils, Fresh tomatoes, Onion, Garlic and Olive oil
+                                </p>
+                            </li>
+                            <li>
+                                <img src="./assets/img/pastaAglio.webp" alt="Spaghetti Aglio e Olio" />
+                                <h1>Spaghetti Aglio e Olio</h1>
+                                <p>Olive oil, Garlic, Crushed red pepper flakes and Parmesan
+                                </p>
+                            </li>
+                            <li>
+                                <img src="./assets/img/pennePesto.webp" alt="Penne with Pesto" />
+                                <h1>Penne with Pesto</h1>
+                                <p> Basil, Olive oil, Pepper, Cashews, Tomatoes, and Parmesan
+                                </p>
+                            </li>
+                            <li>
+                                <img src="./assets/img/fagioli.webp" alt="Pasta Fagioli" />
+                                <h1>Pasta Fagioli</h1>
+                                <p> Great northern beans, Yellow onion, carrots, celery, garlic and parsley
+                                </p>
+                        </ul>
+
+                        </li>
+                        <li class="slide">
+                            <ul class="food-list">
+                                <li>
+                                    <img src="./assets/img/tiramisu.webp" alt="Tiramisu" />
+                                    <h1>Tiramisu</h1>
+                                    <p>Ladyfinger cookies, espresso, mascarpone cheese, Marsala wine, rum and cocoa powder. </p>
+                                </li>
+                                <li>
+                                    <img src="./assets/img/panettone.webp" alt="Panettone">
+                                    <h1>Panettone</h1>
+                                    <p>Raisins, candied fruit peels, almonds, brandy and chocolate</p>
+                                </li>
+                                <li>
+                                    <img src="./assets/img/almond.webp" alt="Almond Biscotti">
+                                    <h1>Almond Biscotti</h1>
+                                    <p>Cookies with almond nuts and chocolate</p>
+                                </li>
+                                <li>
+                                    <img src="./assets/img/cannolis.webp" alt="Cannolis">
+                                    <h1>Cannolis</h1>
+                                    <p>Tube-shaped shells of deep fried pastry dough filled with ricotta cheese</p>
+                                </li>
+                                <li>
+                                    <img src="./assets/img/zeppole.webp" alt="Zeppole">
+                                    <h1>Zeppole</h1>
+                                    <p>Pate choux dough, powdered sugar and milk coating</p>
+                            </ul>
+                            </li>
+            </ul>
+            <div class="menu-btns" data-aos="slide-up">
+                <button id="prev" aria-label="Previous food"><i class="fa-solid fa-arrow-left-long"></i></button>
+                <button id="next" aria-label="Next food"><i class="fa-solid fa-arrow-right-long"></i></button>
+            </div>
+            </div>
+            <section id="booking">
+                <div class="location" data-aos="slide-in-right">
+                    <img src="assets/img/locationHeader.svg" alt="New York city svg" />
+                    <div>
+                        City of New York 266 Westfall Avenue
+                    </div>
+                    <div>09am - 22pm</div>
+                </div>
+                <form data-aos="slide-in-left">
+                    <section>
+                        <label>
+                            Full name
+                            <input required/>
+                        </label>
+                        <label>
+                            Phone Number
+                            <input required/>
+                        </label>
+                    </section>
+                    <section>
+                        <label>
+                            Date
+                            <input type="date" required/>
+                        </label>
+                        <label>
+                            Time
+                            <input type="time" required />
+                        </label>
+                    </section>
+                    <button type="submit" aria-label="Submit form">Book now</button>
+                </form>
+            </section>
+            <footer>
+                <div>
+                    <div class="logo-footer-wrapper">
+                        <img src="./assets/img/logoSmall.svg" alt="Small logo" />
+                        <div>City of New York 266 Westfall Avenue</div>
+                        <div>09am - 22pm</div>
+                    </div>
+                    <div class="links">
+                        <h1>Usefull Links</h1>
+                        <a href="https://gabrielp.netlify.app/" target="_blank">Privacy Policy</a>
+                        <a href="https://gabrielp.netlify.app/" target="_blank">About us</a>
+                        <a href="https://gabrielp.netlify.app/" target="_blank">Contact Us</a>
+                        <span>
+                            <a href="https://gabrielp.netlify.app/" target="_blank">
+                                <i class="fa-brands fa-instagram"></i>
+                            </a>
+                            <a href="https://gabrielp.netlify.app/" target="_blank">
+                                <i class="fa-brands fa-twitter"></i>
+                            </a>
+                            <a href="https://gabrielp.netlify.app/" target="_blank">
+                                <i class="fab fa-facebook-f"></i>
+                            </a>
+                        </span>
+                    </div>
+                </div>
+                <div>
+                    © All rights reserved and designed by <a href="https://gabrielp.netlify.app/" target="_blank">gpmotta21</a>
+                </div>
+            </footer>
+
     </main>
     <script type="module" src="./js/index.js"></script>
 </body>

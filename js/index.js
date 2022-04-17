@@ -1,12 +1,12 @@
 import expandNavbar from "./modules/expandNavbar.js";
 import menu from "./modules/menu.js";
 import navbar from "./modules/navbar.js";
-import paralax from "./modules/paralax.js";
+import animations from "./modules/animations.js";
 
 function init() {
-  navbar();
-  paralax();
-  expandNavbar();
-  menu();
+    navbar();
+    expandNavbar();
+    menu();
+    animations();
 }
 window.addEventListener("load", init);

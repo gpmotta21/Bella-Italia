@@ -1,56 +1,185 @@
-.menu {
-  display: flex;
-  justify-content: flex-start;
-  align-items: flex-end;
-  flex-direction: column;
-  width: 90%;
-  height: 750px;
-  margin: 0 auto;
-  background-position: center;
-  position: relative;
+#menu {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    height: auto;
+    gap: 30px;
+    position: relative;
 }
 
-#carousel {
-  height: 100%;
-  width: 800px;
-  position: relative;
-  transition: all 0.5s;
-  margin: auto;
-  overflow-x: hidden;
+#menu h1 {
+    font-family: 'Grape Nuts', cursive;
 }
 
-.menu ul,
-.menu li {
-  margin: 0;
-  padding: 0;
-  list-style: none;
+#menu p {
+    font-family: 'Alata', sans-serif;
+    color: var(--black);
 }
 
-.menu img {
-  width: 100px;
+
+/* Menu nav */
+
+#menu-nav {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+    position: relative;
+    gap: 18px;
+    margin: 0 auto;
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    opacity: 0;
 }
 
-#carousel ul {
-  position: relative;
-  height: 100%;
-  background-color: blue;
-  width: 100%;
-  transition: transform ease-in-out 1s;
+#menu-nav * {
+    font-family: 'Alata', sans-serif;
+    color: var(--black);
 }
 
-#carousel li {
-  width: 100%;
-  border: yellow solid;
-  position: absolute;
-  top: 0;
-  bottom: 0;
+#menu-nav button {
+    background: none;
+    border: none;
+    font-size: 27px;
+    margin-right: 10px;
 }
 
-.current-dot {
-  transition: all 0.5s;
-  color: red;
+.current-menu {
+    border-bottom: var(--red) 2px solid !important;
 }
 
-.disable-btn {
-  color: red;
+
+/* Menu slide */
+
+#menu-slides {
+    display: flex;
+    align-items: center;
+    position: relative;
+    border-radius: 5px;
+    color: var(--white);
+    position: relative;
+    width: 100%;
+    height: 350px;
+    opacity: 0;
+    transition: transform ease-in-out 1s;
+}
+
+.current-slide {
+    opacity: 1 !important;
+    pointer-events: all !important;
+}
+
+
+/* Pizza, Pasta and Dessert slides */
+
+.slide {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    opacity: 0;
+    bottom: 0;
+    pointer-events: none;
+    transition: all .5s;
+}
+
+
+/* Unordered list of foods inside each food category */
+
+.food-list {
+    display: flex;
+    align-items: center;
+    overflow-x: scroll;
+    gap: 1%;
+    width: 100%;
+    height: auto;
+    scroll-behavior: smooth;
+    scroll-snap-type: x mandatory;
+}
+
+.food-list::-webkit-scrollbar {
+    display: none;
+}
+
+
+/* List of items inside ul of each food category */
+
+.food-list li {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+    min-width: 24%;
+    height: 300px;
+    scroll-snap-align: start;
+}
+
+.food-list li img {
+    width: 200px;
+    height: 143px;
+    object-fit: contain;
+    border-radius: 10px;
+}
+
+.food-list li h1 {
+    margin: 0;
+    text-align: center;
+    font-size: 32px;
+    color: var(--pink);
+}
+
+.food-list li p {
+    width: 80%;
+    margin: 0 auto;
+    text-align: center;
+}
+
+
+/* Previous and Next buttons */
+
+.menu-btns {
+    display: flex;
+    justify-content: center;
+    position: relative;
+    opacity: 0;
+    gap: 100px;
+}
+
+.menu-btns button {
+    background: none;
+    border: none;
+    font-size: 40px;
+    color: var(--pink);
+}
+
+.menu-btns button:active {
+    transform: translateY(5px);
+}
+
+.disable {
+    opacity: .5;
+}
+
+@media (max-width: 1201px) {
+    .food-list li {
+        min-width: 32.9%;
+    }
+}
+
+@media (max-width: 896px) {
+    .food-list li {
+        min-width: 49%;
+    }
+}
+
+@media (max-width: 586px) {
+    .food-list {
+        /* justify-content: center; */
+    }
+    .food-list li {
+        min-width: 100%;
+    }
 }

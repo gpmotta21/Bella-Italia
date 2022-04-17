@@ -1,44 +1,58 @@
 @import "./modules/homepage.css";
 @import "./modules/menu.css";
 @import "./modules/navbar.css";
+@import "./modules/about.css";
+@import "./modules/booking.css";
+@import './modules/animations.css';
+@import './modules/footer.css';
+
+/* Configs */
 
 :root {
-  --white: #edfdfb;
-  --black: #04030f;
+    --white: #edfdfb;
+    --black: #001219;
+    --red: #EF233C;
+    --pink: #FF6B6B;
+    --skin: #FFF1E6;
 }
 
 html,
 body {
-  width: 100%;
+    width: 100vw;
+    scroll-behavior: smooth;
+    overflow-x: hidden;
 }
 
 body {
-  margin: 0;
-  padding: 0;
-  max-width: 1920px;
-  margin: 0 auto;
-  background-color: var(--white);
-  overflow-x: hidden;
+    margin: 0;
+    padding: 0;
+    max-width: 1920px;
+    margin: 0 auto;
+    background-color: var(--white);
+}
+
+* {
+    box-sizing: border-box;
+}
+
+main {
+    display: flex;
+    flex-direction: column;
+    gap: 110px;
 }
 
 ul,
 li {
-  margin: 0;
-  padding: 0;
-  list-style: none;
+    margin: 0;
+    padding: 0;
+    list-style: none;
 }
-
-/* main {
-  scroll-snap-type: y mandatory;
-  overflow-y: scroll;
-  height: 100vh;
-  transition: all 0.3s;
-}
-
-main > div {
-  scroll-snap-align: center;
-} */
 
 a {
-  text-decoration: none;
+    text-decoration: none;
+}
+
+a,
+button {
+    cursor: pointer;
 }

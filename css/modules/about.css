@@ -1,0 +1,150 @@
+#about {
+    display: flex;
+    align-items: center;
+    height: 350px;
+    position: relative;
+}
+
+#about img {
+    position: absolute;
+    opacity: 0;
+    top: 50%;
+    right: 0;
+    transform: translateY(-50%);
+}
+
+.text-wrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 50%;
+    position: relative;
+    text-align: center;
+    color: var(--black);
+    opacity: 0;
+}
+
+.text-wrapper::after {
+    content: '';
+    position: absolute;
+    transform: translate(-50%, -50%);
+    right: 0;
+    top: 50%;
+    height: 60%;
+    width: 3px;
+    background-color: var(--black);
+}
+
+.text-wrapper h1 {
+    margin-top: 0;
+    margin-bottom: 10px;
+    font-size: 110px;
+    font-family: 'Amatic SC', cursive;
+    color: var(--red)
+}
+
+.text-wrapper div {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 90%;
+    padding: 5px;
+    font-family: 'Aleo', serif;
+    font-size: 27px;
+}
+
+.text-wrapper b {
+    color: var(--red);
+}
+
+
+/* Adjusting font and img size */
+
+@media (max-width: 1550px) {
+    #about {
+        height: 350px;
+    }
+    #about h1 {
+        font-size: 85px;
+    }
+    #about div {
+        font-size: 18px;
+    }
+    #about img {
+        width: 48%;
+    }
+}
+
+
+/* Changing the order of the  'about us' items by stretching the 'about us'
+container set setting 'text-wrapper' to space-between */
+
+@media (max-width: 900px) {
+    #about {
+        height: 550px;
+    }
+    .text-wrapper div {
+        width: 70%;
+    }
+    #about img {
+        width: 680px;
+    }
+    .text-wrapper {
+        justify-content: space-between;
+        height: 100%;
+        width: 100%;
+    }
+    .text-wrapper::after {
+        display: none;
+    }
+    .text-wrapper h1 {
+        font-size: 80px;
+    }
+}
+
+
+/* Font and img size adjustments */
+
+@media (max-width: 724px) {
+    #about img {
+        width: 95%;
+    }
+    .text-wrapper div {
+        width: 90%;
+    }
+}
+
+@media (max-width: 540px) {
+    #about {
+        height: 450px;
+    }
+    #about h1 {
+        font-size: 70px;
+    }
+    #about img {
+        top: 45%;
+    }
+    .hours {
+        width: 45%;
+    }
+}
+
+
+/* About us animations */
+
+.fork-animation {
+    animation: fork-slide-in-right 1.5s ease-in-out both;
+}
+
+@keyframes fork-slide-in-right {
+    0% {
+        right: -100%;
+        opacity: 0;
+    }
+    100% {
+        right: 0%;
+        opacity: 1;
+    }
+}
